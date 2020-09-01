@@ -1,0 +1,48 @@
+--- Git ---
+a) Gestor de control de versiones - Genera historial de versiones
+b) A partir del repositorio, se trabaja por master (la rama principal, el código de producción) y por ramas (el código de dev)
+c) Para cada cambio que se realice, se hará un commit (explicación del cambio) - Además se guardará dentro del historial
+d) Siempre se trabaja en la rama y, una vez se termine, se hace un merge a master
+e) Si trabajamos con una herramienta externa que soporta git (github), este será nombrado como origin mientras que el PC será la parte local
+
+Cuando se trabaja con Git, normalmente se hace con un origin (en este caso será github), stagin area (paso intermedio antes de confirmación) y local (PC-user)
+
+-- Configurar Git (consola) -- https://gist.github.com/mrcodedev/c234fd1aa2515008dd934ca8135cbfd2
+a) - git init - Crear el repositorio git (a partir de carpeta existente)
+b) - ls -a - Para conocer los archivos ocultos de la carpeta (debería mostrarse el .git)
+c) NUNCA NUNCA poner un .git dentro de otro .git (es decir, un repositorio dentro de otro)
+d) - git branch - Nos indica en que rama nos encontramos (master o otras ramas)
+e) - git checkout 'nombre rama' - Nos mueve a la rama que indiquemos
+f) - git status - Muestra estado actual
+     - untracked file: archivo en local
+     - tracked file: archivo en stagin area, listo para hacer seguimiento (commit) - git add - para canviar estado
+g) - git add . - trackea todos los archivos (dentro de la carpeta X) a la vez (recomendable hacerlo uno por uno)
+h) - git commit -m 'descripción' - Es necesario guardar una descripción para saber qué cambio se ha hecho
+i) Con - git commit - se guarda el estado del archivo en este momento (a Master, en este caso)
+j) - git push -u origin 'nombre carpeta' - Subir los archivos existentes de la rama en stagin area y con commit a origin
+     (en nuestro caso, origin será github)
+k) - git checkout -b 'nombre_de_rama' - Crea una rama (y nos lleva a ella)
+l) - git merge 'nombre rama' - Estando en master, movemos los archivos de la rama a master
+     (estos han de estar trackeados y con commit, si no no es posible)
+
+Importante! Cuando todo está ya en master (y en origin), es necesario borrar las ramas.
+Lo más óptimo es dejarlo 2-3 días hasta que ya puedas asegurar que todo está en master
+- git branch -d 'nombre rama' - borrar en local (no es posible borrar si estamos en ella)
+- git push origin --delete rama1 - borrar en origin (github)
+
+- git log - Permite ver historial de todos los commit
+
+Importante2! Cuando trabajemos en remoto es importante empezar a trabajar con el master actualizado,
+para ello hemos de actualizar el remoto a partir del origin
+- git pull origin master
+
+El conflicto más común es trabajar sobre una misma rama, tratar de crear ramas para cada cambio concreto
+
+
+
+JUGA AMB GIT - GITHUB ABANS DEL BOOTCAMP!!!!!!!!!!!!!!!
+Una vegada comenci el bootcamp, esborrar l'antic i fer el nou
+
+html es el esqueleto
+css el maquillaje, la piel
+javascript el musculo, la fuerza

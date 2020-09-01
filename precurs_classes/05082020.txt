@@ -1,0 +1,17 @@
+-- cmder --
+
+cd nombre carpeta - va a la siguiente carpeta
+cd .. - va a la anterior carpeta
+ls - muestra los archivos dentro de la carpeta
+mkdir nombre carpeta - crea carpeta
+touch nombre archivo - crea un documento
+code . - abre los archivos en Visual Studio
+rm nombre archivo - elimina un archivo
+rm -rf nombre carpeta - elimina una carpeta
+pwd - te dice en que directorio estás
+mv nombre archivo ../nombre carpeta? - mover un archivo a una carpeta x (REVISAR)
+cd ../ - debería mostrar archivos/carpetas de la carpeta anterior (REVISAR)
+
+typeof null = "object" (Es un bug de js, no se puede cambiar ya que petaria todo)
+
+Carpetas/archivos - Nunca jamás espacios y evitar barras bajas
